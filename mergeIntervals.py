@@ -1,41 +1,64 @@
-class Solution:
+def merge_intervals(intervals: list[list[int]]) -> list[list[int]]:
+    """
+    This function merges overlapping intervals. An interval is represented as [start, end].
+    Two intervals overlap if one starts before the other ends.
+    
+    For example, [1,3] and [2,5] overlap because 2 is between 1 and 3.
+    They can be merged into [1,5].
+    
+    The approach:
+    1. Sort intervals by their start time
+    2. Compare each interval with the previous one
+    3. If they overlap, merge them by taking the later end time
+    4. If they don't overlap, add the previous interval to our result
+    
+    Args:
+        intervals: A list of intervals, where each interval is [start, end]
+        
+    Returns:
+        A list of merged, non-overlapping intervals
+    """
+    
+    # Sort intervals by their start time (first element of each interval)
+    # This ensures overlapping intervals are adjacent
+    intervals.sort()
 
-    def mergeIntervals(self, intervals: list[list[int]]) -> list[list[int]]:
+    # This list will store our merged intervals
+    merged_intervals = []
 
-    # First sort your intervals to make the process just a little more simple with less loops
-    # [5,7], [3,6], [8,11] -> [3,6], [5,7], [8,11]
-        intervals.sort()
+    # Initialize with the first interval as our starting point
+    current_interval_start, current_interval_end = intervals[0]
 
-    # Create the result holders.
-        mergedI = []
+    # Process each remaining interval
+    for next_interval_start, next_interval_end in intervals[1:]:
+        
+        # If the current interval ends before the next one starts,
+        # they don't overlap. Save the current interval and start a new one.
+        if current_interval_end < next_interval_start:
+            merged_intervals.append([current_interval_start, current_interval_end])
+            current_interval_start, current_interval_end = next_interval_start, next_interval_end
+        
+        # If they overlap, merge them by extending the end time if needed
+        # The new end time is the maximum of both end times
+        else:
+            current_interval_end = max(current_interval_end, next_interval_end)
 
-    # Being sorted we can gaurantee the first interval start. NintervalStart and IntervalEnd
-        currentS, currentE = intervals[0]
+    # Don't forget to add the last interval we were working on
+    merged_intervals.append([current_interval_start, current_interval_end])
 
-    # For each interval loop through getting the start and end in the remaining intervals.
-        for intervalS, intervalE in intervals[1:]:
-
-        # If current intervalEnd is less than the next intervals start there is no overlap. Just add it. No merges
-            if currentE < intervalS:
-
-                mergedI.append([currentS, currentE])
-
-            # Update the values to continue on
-                currentS, currentE = intervalS, intervalE
-
-            # Otherwise let's make our currentE the greater of currentE and intervalE
-            # We do not care about the dropped values.
-            else:
-                currentE = max(currentE, intervalE)
-
-        # Add it to the list now
-        mergedI.append([currentS, currentE])
-
-        return mergedI
+    return merged_intervals
 
 def main() -> None:
-    solution = Solution().mergeIntervals([[1,3], [2,5], [6,7], [9,14], [10,15]])
-    print(solution)
+    """
+    Main function to demonstrate the merge_intervals function with an example.
+    """
+    # Example: Merge overlapping intervals
+    # [1,3] and [2,5] overlap -> merge to [1,5]
+    # [6,7] doesn't overlap with [1,5] -> keep separate
+    # [9,14] and [10,15] overlap -> merge to [9,15]
+    # Result: [[1,5], [6,7], [9,15]]
+    solution = merge_intervals([[1, 3], [2, 5], [6, 7], [9, 14], [10, 15]])
+    print("Merged intervals: " + str(solution))
 
 if __name__ == "__main__":
     main()
