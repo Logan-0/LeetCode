@@ -1,34 +1,73 @@
 # LeetCode Solutions
 
-A collection of Python solutions for various LeetCode problems, organized by topic and algorithmic approach.
+A collection of Python solutions for common LeetCode problems. Each problem is solved
+with care for readability, and many are solved **twice** — once the slow, obvious way
+and once the fast, clever way — so you can see exactly what the improvement buys you.
 
-## Overview
+---
 
-This repository contains my implementations of common LeetCode problems, focusing on understanding different algorithmic approaches and their trade-offs. Each problem often includes multiple solutions demonstrating different techniques (brute force vs optimized approaches).
+## What is an Algorithm?
+
+An **algorithm** is a step-by-step set of instructions for solving a problem. A recipe
+is an algorithm. The directions on a GPS are an algorithm. In programming, we write
+algorithms that tell the computer exactly how to process data.
+
+Two algorithms can solve the same problem but take wildly different amounts of time
+or memory. Part of being a good programmer is knowing which algorithm to reach for
+and why.
+
+## What is Big O Notation?
+
+Big O notation describes how the time (or memory) an algorithm uses **grows** as the
+input size grows. The letter "n" stands for the size of the input.
+
+| Notation | Plain English | Example |
+|----------|--------------|---------|
+| O(1) | Always the same speed, no matter how big the input | Reading one element from a list by index |
+| O(log n) | Gets a tiny bit slower as input doubles | Binary search on a sorted list |
+| O(n) | Proportionally slower as input grows | A single loop through a list |
+| O(n log n) | Slightly worse than linear | Most efficient sorting algorithms |
+| O(n²) | Much slower as input grows | A loop inside a loop |
+
+A hash map lookup is O(1). A single loop is O(n). A loop inside a loop is O(n²).
+Trading an O(n²) brute force for an O(n) hash map solution is a common pattern here.
+
+## How to Approach a New Problem
+
+1. **Read carefully.** What is the input? What is the expected output? Are there
+   constraints (e.g., the list is always sorted)?
+2. **Write a brute force solution first.** Even a slow, obvious answer proves you
+   understand the problem.
+3. **Find the bottleneck.** Where is the algorithm doing redundant work?
+4. **Look for a pattern.** Most LeetCode problems fall into one of a handful of
+   recurring patterns (see below).
+5. **Optimize.** Replace the bottleneck with a faster data structure or technique.
+6. **Analyze.** What is the time complexity? The space complexity?
+
+## Recurring Patterns in This Repository
+
+| Pattern | When to Use |
+|---------|------------|
+| **Hash Map** | Need O(1) lookup; counting elements; complement problems |
+| **Two Pointers** | Sorted arrays; sliding window; removing duplicates |
+| **Stack** | Matching brackets; monotonic problems; "next greater element" |
+| **Heap / Priority Queue** | "Top K" problems; streaming minimums or maximums |
+| **Backtracking** | Generating all combinations or permutations |
+| **Dynamic Programming** | Overlapping sub-problems; optimal sub-structure |
+| **BFS / DFS** | Tree traversal; grid exploration; connected components |
+
+Recognizing which pattern fits a problem is the most valuable skill this repository
+is designed to build.
+
+---
 
 ## Structure
 
-- **Problem Solutions**: Individual Python files for each LeetCode problem
-- **Study Guide**: Comprehensive documentation (`LEETCODE_STUDY_GUIDE.md`) covering patterns, principles, and tips
+- **Problem Solutions**: Individual Python files, one per problem
+- **Study Guide**: `LEETCODE_STUDY_GUIDE.md` — deep dives into every pattern with
+  tips, common mistakes, and complexity analysis
 
-## Covered Topics
-
-- Array & Hash Table Problems
-- Linked List Problems
-- Stack & Queue Problems
-- Tree Problems
-- Backtracking & Recursion
-- Heap & Priority Queue
-- Sorting & Searching
-- Greedy Algorithms
-- Two Pointer Technique
-
-## Key Features
-
-- **Multiple Approaches**: Many problems include both brute force and optimized solutions
-- **Detailed Documentation**: Each solution includes time/space complexity analysis
-- **Pattern Recognition**: Focus on identifying common algorithmic patterns
-- **Educational Focus**: Comments and explanations for learning purposes
+---
 
 ## Getting Started
 
@@ -38,12 +77,12 @@ This repository contains my implementations of common LeetCode problems, focusin
    cd LeetCode
    ```
 
-2. Review the study guide:
+2. Read the study guide first:
    ```bash
    cat LEETCODE_STUDY_GUIDE.md
    ```
 
-3. Run individual solutions:
+3. Run any solution directly:
    ```bash
    python twoSumOnePassHash.py
    ```
