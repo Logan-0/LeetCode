@@ -87,6 +87,38 @@ is designed to build.
    python twoSumOnePassHash.py
    ```
 
+## Practice Problems
+
+These problems have test suites ready but **solution files are intentionally left blank** —
+your job is to implement the function until all tests pass. Each directory contains:
+
+- `<name>.py` — the solution stub with a full docstring explaining the problem. Write your code here.
+- `test_<name>.py` — ready-made test cases. Run from inside the directory with `python test_<name>.py`.
+
+When all tests print `PASS`, your solution is correct.
+
+### Easy
+
+| Problem | Topic | LeetCode # | Solution File | Test File |
+|---------|-------|------------|---------------|-----------|
+| Contains Duplicate | Array / Hash Set | #217 | [contains_duplicate.py](contains_duplicate/contains_duplicate.py) | [test_contains_duplicate.py](contains_duplicate/test_contains_duplicate.py) |
+| Maximum Subarray | Array / DP (Kadane's) | #53 | [maximum_subarray.py](maximum_subarray/maximum_subarray.py) | [test_maximum_subarray.py](maximum_subarray/test_maximum_subarray.py) |
+| Valid Palindrome | String / Two Pointers | #125 | [valid_palindrome.py](valid_palindrome/valid_palindrome.py) | [test_valid_palindrome.py](valid_palindrome/test_valid_palindrome.py) |
+| Missing Number | Array / Math | #268 | [missing_number.py](missing_number/missing_number.py) | [test_missing_number.py](missing_number/test_missing_number.py) |
+| Maximum Depth of Binary Tree | Tree / DFS | #104 | [maximum_depth_binary_tree.py](maximum_depth_binary_tree/maximum_depth_binary_tree.py) | [test_maximum_depth_binary_tree.py](maximum_depth_binary_tree/test_maximum_depth_binary_tree.py) |
+
+### Medium
+
+| Problem | Topic | LeetCode # | Solution File | Test File |
+|---------|-------|------------|---------------|-----------|
+| House Robber | Dynamic Programming | #198 | [house_robber.py](house_robber/house_robber.py) | [test_house_robber.py](house_robber/test_house_robber.py) |
+| Jump Game | Greedy | #55 | [jump_game.py](jump_game/jump_game.py) | [test_jump_game.py](jump_game/test_jump_game.py) |
+| Container With Most Water | Two Pointers | #11 | [container_with_most_water.py](container_with_most_water/container_with_most_water.py) | [test_container_with_most_water.py](container_with_most_water/test_container_with_most_water.py) |
+| Group Anagrams | Hash Map | #49 | [group_anagrams.py](group_anagrams/group_anagrams.py) | [test_group_anagrams.py](group_anagrams/test_group_anagrams.py) |
+| Spiral Matrix | Matrix / Simulation | #54 | [spiral_matrix.py](spiral_matrix/spiral_matrix.py) | [test_spiral_matrix.py](spiral_matrix/test_spiral_matrix.py) |
+
+---
+
 ## Problem List
 
 ### Array & Hashing
