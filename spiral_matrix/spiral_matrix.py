@@ -29,7 +29,44 @@ def spiral_order(matrix: list[list[int]]) -> list[int]:
     Returns:
         All elements of the matrix collected in spiral order
     """
-    pass
+    # Get the row and column length
+    rowLimit, colLimit = len(matrix), len(matrix[0])
+
+    # Associate Directions -> (0,1) Right == (1,0) Down == (0,-1) Left == (-1, 0) Up
+    dirs = (0,1,0,-1,0)
+
+    # For each Number in the Matrix mark them as False for not Visited Yet
+    visitedNumber = [[False] * colLimit for _ in range(rowLimit)]
+
+    # Initialize and Markers Needed
+    currentRow = currentCol = directionInteger = 0
+
+    # Get something to store results
+    spiralRes = []
+
+    # For loop through each of the numbers in the matrix
+    for number in range(rowLimit * colLimit):
+
+        # Append the current number
+        spiralRes.append(matrix[currentRow][currentCol])
+
+        # Mark that cell as visited
+        visitedNumber[currentRow][currentCol] = True
+
+        # Calculate the next position
+        nextRow, nextCol = currentRow + dirs[directionInteger], currentCol + dirs[directionInteger + 1]
+
+        # If you go past 0 which means either left or top OR you go past either limits which means bottom or right OR the next one is visited in the grid
+        if nextRow < 0 or nextRow >= rowLimit or nextCol < 0 or nextCol >= colLimit or visitedNumber[nextRow][nextCol] == True:
+
+            # DirectionInteger = DirectionInteger + 1 Modulo 4
+            directionInteger = (directionInteger + 1) % 4
+        currentRow += dirs[directionInteger]
+        currentCol += dirs[directionInteger + 1]
+    return spiralRes
+
+    
+
 
 
 def main() -> None:

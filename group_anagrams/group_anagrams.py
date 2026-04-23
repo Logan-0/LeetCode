@@ -1,4 +1,7 @@
-def group_anagrams(words: list[str]) -> list[list[str]]:
+from collections import defaultdict
+from typing import List
+
+def group_anagrams(words: List[str]) -> List[List[str]]:
     """
     Given an array of strings, group the anagrams together and return the groups
     in any order. An anagram is a word formed by rearranging the letters of
@@ -28,7 +31,17 @@ def group_anagrams(words: list[str]) -> list[list[str]]:
     Returns:
         A list of groups where each group contains anagrams of each other
     """
-    pass
+    anagramGroups = defaultdict(list)
+
+    for string in words:
+
+        sorted_key = ''.join(sorted(string))
+
+        anagramGroups[sorted_key].append(string)
+
+    return list(anagramGroups.values())
+
+
 
 
 def main() -> None:

@@ -29,7 +29,16 @@ def max_area(wall_heights: list[int]) -> int:
     Returns:
         The maximum area of water a container can hold
     """
-    pass
+    if len(wall_heights) == 1:
+        return wall_heights[0]
+
+    highestNum = max(wall_heights)
+
+    wall_heights.remove(highestNum)
+
+    nextHighest = max(wall_heights)
+
+    return nextHighest * nextHighest
 
 
 def main() -> None:
