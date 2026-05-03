@@ -16,56 +16,14 @@ Two algorithms can solve the same problem but take wildly different amounts of t
 or memory. Part of being a good programmer is knowing which algorithm to reach for
 and why.
 
-## What is Big O Notation?
-
-Big O notation describes how the time (or memory) an algorithm uses **grows** as the
-input size grows. The letter "n" stands for the size of the input.
-
-| Notation | Plain English | Example |
-|----------|--------------|---------|
-| O(1) | Always the same speed, no matter how big the input | Reading one element from a list by index |
-| O(log n) | Gets a tiny bit slower as input doubles | Binary search on a sorted list |
-| O(n) | Proportionally slower as input grows | A single loop through a list |
-| O(n log n) | Slightly worse than linear | Most efficient sorting algorithms |
-| O(n²) | Much slower as input grows | A loop inside a loop |
-
-A hash map lookup is O(1). A single loop is O(n). A loop inside a loop is O(n²).
-Trading an O(n²) brute force for an O(n) hash map solution is a common pattern here.
-
-## How to Approach a New Problem
-
-1. **Read carefully.** What is the input? What is the expected output? Are there
-   constraints (e.g., the list is always sorted)?
-2. **Write a brute force solution first.** Even a slow, obvious answer proves you
-   understand the problem.
-3. **Find the bottleneck.** Where is the algorithm doing redundant work?
-4. **Look for a pattern.** Most LeetCode problems fall into one of a handful of
-   recurring patterns (see below).
-5. **Optimize.** Replace the bottleneck with a faster data structure or technique.
-6. **Analyze.** What is the time complexity? The space complexity?
-
-## Recurring Patterns in This Repository
-
-| Pattern | When to Use |
-|---------|------------|
-| **Hash Map** | Need O(1) lookup; counting elements; complement problems |
-| **Two Pointers** | Sorted arrays; sliding window; removing duplicates |
-| **Stack** | Matching brackets; monotonic problems; "next greater element" |
-| **Heap / Priority Queue** | "Top K" problems; streaming minimums or maximums |
-| **Backtracking** | Generating all combinations or permutations |
-| **Dynamic Programming** | Overlapping sub-problems; optimal sub-structure |
-| **BFS / DFS** | Tree traversal; grid exploration; connected components |
-
-Recognizing which pattern fits a problem is the most valuable skill this repository
-is designed to build.
-
----
-
 ## Structure
 
 - **Problem Solutions**: Individual Python files, one per problem
-- **Study Guide**: `LEETCODE_STUDY_GUIDE.md` — deep dives into every pattern with
-  tips, common mistakes, and complexity analysis
+- **Documentation**: See the `docs/` folder for detailed documentation:
+  - `docs/HowItWorks.md` — Comprehensive guide to algorithmic patterns and problem-solving strategies
+  - `docs/RoadMap.md` — Project status and future work
+  - `docs/ProjectSummary.md` — Feature summary
+  - `docs/ChangeLog.md` — Version history
 
 ---
 
@@ -77,9 +35,9 @@ is designed to build.
    cd LeetCode
    ```
 
-2. Read the study guide first:
+2. Read the documentation:
    ```bash
-   cat LEETCODE_STUDY_GUIDE.md
+   cat docs/HowItWorks.md
    ```
 
 3. Run any solution directly:
