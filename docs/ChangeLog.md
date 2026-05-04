@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Project documentation suite**:
   - README.md with project overview and quick start
   - RoadMap.md with project status and future work
-  - HowItWorks.md with architecture overview
+  - Education.md with architecture overview
   - ProjectSummary.md with feature summary
   - ChangeLog.md with version history
 - **Test suites** for practice problems with intentionally blank solution files

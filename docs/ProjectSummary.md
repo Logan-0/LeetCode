@@ -27,7 +27,7 @@ This repository provides:
 ### Educational Documentation
 - **LEETCODE_STUDY_GUIDE.md**: Comprehensive guide to algorithmic patterns
 - **README.md**: Project overview, quick start, and problem categorization
-- **HowItWorks.md**: Architecture overview and learning philosophy
+- **Education.md**: Architecture overview and learning philosophy
 - **Code comments**: Inline explanations for each algorithm step
 
 ### Testing Infrastructure
@@ -89,7 +89,7 @@ LeetCode/
 ├── README.md                    # Project overview and quick start
 ├── LEETCODE_STUDY_GUIDE.md      # Deep dive into algorithmic patterns
 ├── RoadMap.md                   # Project status and future work
-├── HowItWorks.md                # Architecture overview
+├── Education.md                 # Architecture overview
 ├── ProjectSummary.md            # This file
 ├── ChangeLog.md                 # Version history
 ├── add_two_numbers/             # Problem directories
@@ -103,7 +103,7 @@ LeetCode/
 
 ---
 
-## Usage
+## Quick Start
 
 ### Running a Solution
 ```bash
@@ -118,19 +118,14 @@ python test_binary_search.py
 
 ### Reading the Study Guide
 ```bash
-cat LEETCODE_STUDY_GUIDE.md
+cat docs/Education.md
 ```
 
 ---
 
 ## Learning Path
 
-1. **Start with README.md**: Understand project structure and philosophy
-2. **Read LEETCODE_STUDY_GUIDE.md**: Learn algorithmic patterns
-3. **Practice with Easy Problems**: Build confidence with simpler challenges
-4. **Tackle Medium Problems**: Apply patterns to more complex scenarios
-5. **Analyze Complexity**: Understand time and space trade-offs
-6. **Apply to New Problems**: Use pattern recognition for unfamiliar challenges
+See `docs/Education.md` for the complete learning path, including pattern deep dives and study tips.
 
 ---
 

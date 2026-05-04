@@ -20,7 +20,7 @@ and why.
 
 - **Problem Solutions**: Individual Python files, one per problem
 - **Documentation**: See the `docs/` folder for detailed documentation:
-  - `docs/HowItWorks.md` — Comprehensive guide to algorithmic patterns and problem-solving strategies
+  - `docs/Education.md` — Comprehensive guide to algorithmic patterns and problem-solving strategies
   - `docs/RoadMap.md` — Project status and future work
   - `docs/ProjectSummary.md` — Feature summary
   - `docs/ChangeLog.md` — Version history
@@ -37,7 +37,7 @@ and why.
 
 2. Read the documentation:
    ```bash
-   cat docs/HowItWorks.md
+   cat docs/Education.md
    ```
 
 3. Run any solution directly:

@@ -1,4 +1,4 @@
-# How It Works - LeetCode Solutions
+# Education - LeetCode Solutions
 
 This document explains the overarching architecture and educational philosophy behind the LeetCode solutions repository, including a comprehensive guide to algorithmic patterns.
 
@@ -7,6 +7,7 @@ This document explains the overarching architecture and educational philosophy b
 ## Table of Contents
 1. [Educational Philosophy](#educational-philosophy)
 2. [Repository Architecture](#repository-architecture)
+   - [Data Flow](#data-flow)
 3. [Algorithmic Patterns](#algorithmic-patterns)
 4. [Code Style Philosophy](#code-style-philosophy)
 5. [Testing Strategy](#testing-strategy)
@@ -51,10 +52,26 @@ LeetCode/
 ├── README.md                    # Project overview and quick start
 ├── docs/
 │   ├── RoadMap.md               # Project status and future work
-│   ├── HowItWorks.md            # This file - architecture and patterns
+│   ├── Education.md             # This file - architecture and patterns
 │   ├── ProjectSummary.md        # Feature summary
 │   └── ChangeLog.md             # Version history
 ```
+
+### Data Flow
+
+```
+New Problem Idea → Create problem directory → Write brute-force solution →
+Capture time/space complexity → Optimize solution → Add docstring + comments →
+Write or update tests → Run tests locally → Update documentation → Commit
+```
+
+1. **Select or create a problem directory.** Each problem lives in its own folder so implementations and tests stay isolated.
+2. **Implement the brute-force solution first.** This clarifies correctness before any optimizations.
+3. **Record complexity.** Every solution documents Big O time and space so trade-offs are explicit.
+4. **Optimize and refactor.** Replace bottlenecks with more appropriate data structures or algorithmic patterns.
+5. **Document the approach.** Detailed docstrings and inline comments explain the reasoning behind each step.
+6. **Test.** Run the associated `test_<name>.py` file (when provided) or add new tests to validate the implementation.
+7. **Repeat.** Apply the same flow to the next pattern or difficulty level.
 
 ---
 
