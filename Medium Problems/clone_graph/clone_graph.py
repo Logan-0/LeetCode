@@ -32,6 +32,9 @@ def clone_graph(node: Node | None) -> Node | None:
 
     Returns:
         A deep copy of the graph
+
+    Time Complexity: O(V + E) -- visiting all vertices and edges
+    Space Complexity: O(V) -- storing cloned nodes and recursion stack
     """
     pass
 

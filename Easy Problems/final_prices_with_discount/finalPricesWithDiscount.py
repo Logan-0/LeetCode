@@ -9,6 +9,9 @@ def final_prices(prices: list[int]) -> list[int]:
         
     Returns:
         The same list with discounts applied
+
+    Time Complexity: O(n²) -- nested loops in worst case
+    Space Complexity: O(1) -- modifying array in place
     """
     
     # Get the total number of items in the price list

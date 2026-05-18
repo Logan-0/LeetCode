@@ -28,6 +28,9 @@ def spiral_order(matrix: list[list[int]]) -> list[int]:
 
     Returns:
         All elements of the matrix collected in spiral order
+
+    Time Complexity: O(m × n) -- visits each cell exactly once
+    Space Complexity: O(m × n) -- visited matrix stores all cells
     """
     # Get the row and column length
     rowLimit, colLimit = len(matrix), len(matrix[0])

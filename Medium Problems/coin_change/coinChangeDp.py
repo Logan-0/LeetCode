@@ -13,6 +13,9 @@ def coin_change_dp(coin_denominations: list[int], target_amount: int) -> int:
         
     Returns:
         The minimum number of coins needed, or -1 if it's impossible
+
+    Time Complexity: O(n × m) -- where n is target amount, m is number of coin denominations
+    Space Complexity: O(n) -- memoization dictionary stores up to target amount entries
     """
     
     # This dictionary stores our memoized results

@@ -25,6 +25,9 @@ def permute(nums: list[int]) -> list[list[int]]:
 
     Returns:
         All possible permutations
+
+    Time Complexity: O(N × N!) -- generating all permutations
+    Space Complexity: O(N) -- recursion stack depth
     """
     pass
 

@@ -29,6 +29,9 @@ def daily_temperatures_stack(temperature_list: list[int]) -> list[int]:
         
     Returns:
         A list where each element is the number of days to wait for a warmer temperature
+
+    Time Complexity: O(n) -- each day pushed and popped at most once
+    Space Complexity: O(n) -- stack can hold up to n indices
     """
     
     # Get the total number of days

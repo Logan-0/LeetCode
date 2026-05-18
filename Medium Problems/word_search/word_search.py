@@ -28,6 +28,9 @@ def exist(board: list[list[str]], word: str) -> bool:
 
     Returns:
         True if the word exists in the grid, False otherwise
+
+    Time Complexity: O(N × 3^L) -- where N is cells, L is word length
+    Space Complexity: O(L) -- recursion stack depth
     """
     pass
 

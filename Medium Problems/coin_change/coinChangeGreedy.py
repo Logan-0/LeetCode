@@ -13,6 +13,9 @@ def coin_change_greedy(coin_denominations: list[int], target_amount: int) -> int
         
     Returns:
         The minimum number of coins needed, or -1 if it's impossible
+
+    Time Complexity: O(n × m) -- where n is target amount, m is number of coin denominations
+    Space Complexity: O(1) -- only using counters
     """
     # Track the total value of coins we've used so far
     current_total = 0

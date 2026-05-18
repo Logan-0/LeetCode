@@ -15,6 +15,9 @@ def merge_sorted_array(first_array: list[int], first_array_length: int, second_a
         
     Returns:
         The merged sorted array (modifies first_array in place)
+
+    Time Complexity: O(n + m) -- single pass through both arrays
+    Space Complexity: O(1) -- merging in place, only using index variables
     """
     
     # Index of the last actual element in the first array

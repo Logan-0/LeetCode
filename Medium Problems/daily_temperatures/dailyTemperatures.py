@@ -33,6 +33,9 @@ def daily_temperatures(temperature_list: list[int]) -> list[int]:
         
     Returns:
         A list where each element is the number of days to wait for a warmer temperature
+
+    Time Complexity: O(n * unique_temperatures) -- depends on temperature range
+    Space Complexity: O(n) -- dictionary stores indices for each temperature
     """
     
     # Get the total number of days

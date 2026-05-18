@@ -14,6 +14,9 @@ def length_of_lis(numbers: list[int]) -> int:
         
     Returns:
         The length of the longest increasing subsequence
+
+    Time Complexity: O(n²) -- nested loops for DP
+    Space Complexity: O(n) -- DP array stores n values
     """
     
     # Special case: if all numbers are the same, the longest increasing subsequence is just 1

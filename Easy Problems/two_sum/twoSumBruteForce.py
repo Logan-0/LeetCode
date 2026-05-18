@@ -11,6 +11,9 @@ def two_sum_brute_force(numbers: list[int], target_sum: int) -> list[int]:
     Returns:
         A list containing the indices of the two numbers that add up to target_sum,
         or an empty list if no such pair exists
+
+    Time Complexity: O(n²) -- nested loops checking all pairs
+    Space Complexity: O(1) -- only using index variables
     """
     
     # Loop through each number in the list (using its index)

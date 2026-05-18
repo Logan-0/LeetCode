@@ -18,6 +18,9 @@ def create_kth_largest(kth_largest_value: int, initial_numbers: list[int]):
         
     Returns:
         A function that can be called to add new numbers and get the current k-th largest
+
+    Time Complexity: O(n log k) for initialization, O(log k) per add operation
+    Space Complexity: O(k) -- heap stores at most k elements
     """
     
     # This is our min-heap - it will always contain at most k elements

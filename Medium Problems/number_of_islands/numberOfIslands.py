@@ -13,6 +13,9 @@ def num_of_islands(grid: list[list[str]]) -> int:
         
     Returns:
         The number of islands found
+
+    Time Complexity: O(m × n) -- visits each cell at most once
+    Space Complexity: O(m × n) -- recursion stack in worst case
     """
     
     def depth_first_search(row_index: int, column_index: int) -> None:

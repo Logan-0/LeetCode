@@ -30,6 +30,9 @@ def can_finish(num_courses: int, prerequisites: list[list[int]]) -> bool:
 
     Returns:
         True if all courses can be finished, False otherwise
+
+    Time Complexity: O(V + E) -- where V is courses, E is prerequisites
+    Space Complexity: O(V + E) -- storing graph and visited state
     """
     pass
 

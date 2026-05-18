@@ -26,6 +26,9 @@ def is_palindrome(input_string: str) -> bool:
 
     Returns:
         True if the string is a valid palindrome, False otherwise
+
+    Time Complexity: O(n) -- single pass through the filtered string
+    Space Complexity: O(n) -- filtered string stores up to n characters
     """
     removeAlphaNumeric = ''.join(filter(str.isalnum,input_string))
 

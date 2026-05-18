@@ -17,6 +17,9 @@ def merge_intervals(intervals: list[list[int]]) -> list[list[int]]:
         
     Returns:
         A list of merged, non-overlapping intervals
+
+    Time Complexity: O(n log n) -- sorting dominates
+    Space Complexity: O(n) -- storing merged intervals
     """
     
     # Sort intervals by their start time (first element of each interval)

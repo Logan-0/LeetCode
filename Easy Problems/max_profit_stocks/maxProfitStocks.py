@@ -12,6 +12,9 @@ def max_profit(daily_stock_prices: list[int]) -> int:
         
     Returns:
         The maximum profit achievable
+
+    Time Complexity: O(n) -- single pass through the prices
+    Space Complexity: O(1) -- only tracking total profit
     """
     
     # Track the total profit accumulated from all profitable transactions

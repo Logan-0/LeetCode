@@ -26,6 +26,9 @@ def subsets(nums: list[int]) -> list[list[int]]:
 
     Returns:
         All possible subsets (the power set)
+
+    Time Complexity: O(N × 2^N) -- generating all subsets
+    Space Complexity: O(N) -- recursion stack depth
     """
     pass
 

@@ -80,6 +80,9 @@ def merge_two_lists(first_list_head: ListNode | None, second_list_head: ListNode
         
     Returns:
         The head of the merged sorted linked list
+
+    Time Complexity: O(n + m) -- single pass through both lists
+    Space Complexity: O(1) -- only using pointer variables, no extra space
     """
     
     # Create a dummy head to simplify building the result list

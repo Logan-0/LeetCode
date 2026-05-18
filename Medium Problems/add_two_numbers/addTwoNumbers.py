@@ -78,6 +78,9 @@ def add_two_numbers(first_list_head: ListNode | None, second_list_head: ListNode
         
     Returns:
         The head of a new linked list representing the sum
+
+    Time Complexity: O(max(n, m)) -- single pass through both lists
+    Space Complexity: O(max(n, m)) -- new list stores sum digits
     """
     
     # Create a dummy head to simplify building the result list

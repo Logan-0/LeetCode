@@ -28,6 +28,9 @@ def find_min(nums: list[int]) -> int:
 
     Returns:
         The minimum element in the array
+
+    Time Complexity: O(log n) -- binary search
+    Space Complexity: O(1) -- only using pointer variables
     """
     pass
 

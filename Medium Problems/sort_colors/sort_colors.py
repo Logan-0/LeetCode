@@ -29,6 +29,9 @@ def sort_colors(nums: list[int]) -> None:
 
     Returns:
         None - the array is modified in-place
+
+    Time Complexity: O(n) -- single pass with three pointers
+    Space Complexity: O(1) -- in-place sorting
     """
     pass
 

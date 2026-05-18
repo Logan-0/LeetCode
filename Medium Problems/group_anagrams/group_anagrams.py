@@ -30,6 +30,9 @@ def group_anagrams(words: List[str]) -> List[List[str]]:
 
     Returns:
         A list of groups where each group contains anagrams of each other
+
+    Time Complexity: O(n × k log k) -- where n is number of words, k is max word length
+    Space Complexity: O(n × k) -- storing all words in dictionary
     """
     anagramGroups = defaultdict(list)
 

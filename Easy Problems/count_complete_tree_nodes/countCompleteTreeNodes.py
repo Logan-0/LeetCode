@@ -106,6 +106,9 @@ def count_complete_tree_nodes(root_node: TreeNode | None) -> int:
         
     Returns:
         The total number of nodes in the tree
+
+    Time Complexity: O(n) -- visits each node exactly once
+    Space Complexity: O(h) -- recursion stack depth where h is tree height
     """
     
     # Base case: if this node doesn't exist, count is 0

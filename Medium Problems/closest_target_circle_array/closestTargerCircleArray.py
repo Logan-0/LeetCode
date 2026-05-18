@@ -17,6 +17,9 @@ def find_closest_target_distance(words: List[str], target_word: str, starting_in
         
     Returns:
         The shortest distance to the target word, or -1 if the target is not found
+
+    Time Complexity: O(n) -- single pass through the array
+    Space Complexity: O(1) -- only tracking minimum distance
     """
     
     # If the target word doesn't exist in the array, return -1

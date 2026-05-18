@@ -13,6 +13,9 @@ def longest_consecutive_sequence(numbers: list[int]) -> int:
         
     Returns:
         The length of the longest consecutive sequence
+
+    Time Complexity: O(n log n) -- sorting dominates
+    Space Complexity: O(n) -- set and list store unique elements
     """
     
     # Initialize counters for tracking sequence lengths

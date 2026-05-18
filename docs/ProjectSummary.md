@@ -45,6 +45,12 @@ This repository provides:
 - **README.md**: Project overview, quick start, and problem categorization
 - **Education.md**: Architecture overview and learning philosophy
 - **Code comments**: Inline explanations for each algorithm step
+- **Complexity Analysis**: Time and space complexity documented for all solutions
+
+### Analysis Tools
+- **Complexity Visualizer** (`tools/complexity_visualizer.py`): Generate matplotlib plots comparing time complexity growth rates
+- **Performance Benchmarking** (`tools/benchmark.py`): Compare execution time and memory usage of different approaches
+- **LeetCode API Integration** (`tools/leetcode_api.py`): Fetch problems from LeetCode API and generate solution templates
 
 ### Testing Infrastructure
 - **Test suites**: Ready-made test cases for practice problems
@@ -94,11 +100,11 @@ This repository provides:
 ### Documentation
 - Comprehensive docstrings for all functions
 - Inline comments explaining each step
-- Time and space complexity documented
+- Time and space complexity documented for all solutions
 - Algorithm approach clearly explained
 - All functions include detailed docstrings explaining the algorithm
 - Inline comments explain each step for educational purposes
-- Time and space complexity documented where relevant
+- Complexity analysis includes both time and space complexity
 
 ### Comment Spacing
 - Comment followed by code: no empty line needed
@@ -147,13 +153,26 @@ LeetCode/
 ├── Education.md                 # Architecture overview
 ├── ProjectSummary.md            # This file
 ├── ChangeLog.md                 # Version history
-├── add_two_numbers/             # Problem directories
-│   ├── addTwoNumbers.py
-│   └── test_add_two_numbers.py
-├── binary_search/
-│   ├── binary_search.py
-│   └── test_binary_search.py
-└── ... (40+ problem directories)
+├── tools/                       # Analysis and utility tools
+│   ├── complexity_visualizer.py # Time complexity visualization with matplotlib
+│   ├── benchmark.py             # Performance benchmarking tool
+│   └── leetcode_api.py          # LeetCode API integration for problem fetching
+├── Easy Problems/               # Easy difficulty problems
+│   ├── two_sum/
+│   │   ├── twoSumBruteForce.py
+│   │   ├── twoSumOnePassHash.py
+│   │   └── test_two_sum.py
+│   └── ... (14+ problem directories)
+├── Medium Problems/              # Medium difficulty problems
+│   ├── add_two_numbers/
+│   │   ├── addTwoNumbers.py
+│   │   └── test_add_two_numbers.py
+│   └── ... (30+ problem directories)
+└── docs/                        # Documentation and visualizations
+    ├── complexity_comparison.png
+    ├── leetcode_patterns_complexity.png
+    ├── custom_complexity.png
+    └── benchmark_comparison.png
 ```
 
 ---
@@ -353,12 +372,10 @@ When all tests print `PASS`, your solution is correct.
 
 Potential additions that are not required for completion:
 - Additional problem solutions (House Robber, Jump Game, Container With Most Water)
-- Time complexity visualizations
-- Space complexity analysis for each solution
 - Interactive problem selection interface
-- Performance benchmarking between approaches
 - Automated testing script for all solutions
-- LeetCode API integration for problem fetching
+- Additional complexity visualization patterns
+- Web-based interface for problem browsing
 
 ---
 

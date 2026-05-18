@@ -25,6 +25,9 @@ def max_subarray(numbers: list[int]) -> int:
 
     Returns:
         The largest sum of any contiguous subarray
+
+    Time Complexity: O(n) -- single pass through the array
+    Space Complexity: O(1) -- only two variables needed
     """
     maxArray = current_sum = numbers[0]
 

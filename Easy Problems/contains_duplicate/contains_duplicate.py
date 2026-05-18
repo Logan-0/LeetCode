@@ -21,6 +21,9 @@ def contains_duplicate(numbers: list[int]) -> bool:
 
     Returns:
         True if any value appears at least twice, False if all are distinct
+
+    Time Complexity: O(n) -- set creation is O(n)
+    Space Complexity: O(n) -- set stores up to n elements
     """
     checkSet = set(numbers)
     if len(checkSet) != len(numbers):

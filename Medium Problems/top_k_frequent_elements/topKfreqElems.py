@@ -16,6 +16,9 @@ def top_k_elements(numbers: list[int], k_most_frequent: int) -> list[int]:
         
     Returns:
         A list of the k most frequent elements
+
+    Time Complexity: O(n log n) -- sorting dominates
+    Space Complexity: O(n) -- storing frequency counts and pairs
     """
     
     # Dictionary to store the count of each number

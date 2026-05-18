@@ -12,6 +12,9 @@ def generate_parenthesis(number_of_pairs: int) -> list[str]:
         
     Returns:
         A list of all valid parenthesis combinations
+
+    Time Complexity: O(4^n/√n) -- Catalan number growth
+    Space Complexity: O(n) -- recursion stack depth is n
     """
     
     def backtrack(open_parentheses_count: int, closed_parentheses_count: int, current_string: str) -> None:

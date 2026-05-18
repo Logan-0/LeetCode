@@ -27,6 +27,9 @@ def can_jump(jump_lengths: list[int]) -> bool:
 
     Returns:
         True if the last index is reachable from index 0, False otherwise
+
+    Time Complexity: O(n) -- single pass through array
+    Space Complexity: O(1) -- only tracking furthest reachable index
     """
     pass
 

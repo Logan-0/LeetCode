@@ -30,6 +30,9 @@ def rob(house_values: list[int]) -> int:
 
     Returns:
         The maximum amount that can be robbed without triggering alarms
+
+    Time Complexity: O(n) -- single pass through houses
+    Space Complexity: O(1) -- only tracking two previous values
     """
     pass
 

@@ -11,6 +11,9 @@ def combinations_of_phone_number(phone_digits: str) -> list[str]:
         
     Returns:
         A list of all possible letter combinations
+
+    Time Complexity: O(4^n) -- where n is number of digits, each digit maps to 3-4 letters
+    Space Complexity: O(4^n) -- storing all combinations
     """
     
     # This list maps each digit to its corresponding letters on a phone keypad

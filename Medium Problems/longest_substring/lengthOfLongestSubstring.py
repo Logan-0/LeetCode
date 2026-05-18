@@ -11,6 +11,9 @@ def length_of_longest_substring(input_string: str) -> int:
         
     Returns:
         The length of the longest substring without repeating characters
+
+    Time Complexity: O(n²) -- nested loops checking all substrings
+    Space Complexity: O(min(n, m)) -- where m is character set size
     """
     
     # Track the maximum length found so far

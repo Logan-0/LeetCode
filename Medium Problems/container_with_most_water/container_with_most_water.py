@@ -28,6 +28,9 @@ def max_area(wall_heights: list[int]) -> int:
 
     Returns:
         The maximum area of water a container can hold
+
+    Time Complexity: O(n) -- single pass with two pointers
+    Space Complexity: O(1) -- only using pointer variables
     """
     if len(wall_heights) == 1:
         return wall_heights[0]

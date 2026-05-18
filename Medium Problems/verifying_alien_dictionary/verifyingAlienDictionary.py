@@ -16,6 +16,9 @@ def verify_dictionary(words: list[str], alien_alphabet_order: str) -> bool:
         
     Returns:
         True if the words are sorted correctly according to the alien alphabet, False otherwise
+
+    Time Complexity: O(n × m) -- where n is number of words, m is max word length
+    Space Complexity: O(1) -- alphabet mapping is fixed size (26)
     """
     
     # Create a dictionary that maps each character to its position in the alien alphabet

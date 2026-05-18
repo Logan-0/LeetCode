@@ -12,6 +12,9 @@ def search_2d(matrix: list[list[int]], target_value: int) -> bool:
         
     Returns:
         True if the target is found, False otherwise
+
+    Time Complexity: O(m × n) -- checking each element in each row
+    Space Complexity: O(1) -- only using loop variables
     """
     
     # If the matrix is empty, we can't find anything

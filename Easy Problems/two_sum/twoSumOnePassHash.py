@@ -19,6 +19,9 @@ def two_sum_one_pass_hash(numbers: list[int], target_sum: int) -> list[int]:
     Returns:
         A list containing the indices of the two numbers that add up to target_sum,
         or an empty list if no such pair exists
+
+    Time Complexity: O(n) -- single pass through the list
+    Space Complexity: O(n) -- dictionary can store up to n elements
     """
     
     # Dictionary to store numbers we've seen and their indices

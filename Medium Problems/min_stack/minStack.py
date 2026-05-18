@@ -16,6 +16,9 @@ def create_min_stack():
     
     Returns:
         A dictionary containing functions to operate on the stack (push, pop, top, get_min)
+
+    Time Complexity: O(1) for all operations
+    Space Complexity: O(n) -- both stacks store up to n elements
     """
     
     # This is our main stack - stores all elements in order
