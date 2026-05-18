@@ -1,0 +1,386 @@
+# LeetCode Learning Roadmap
+
+**Last Updated**: May 11, 2026
+**Total Problems**: 53
+**Completed**: 35 | **Stub/New**: 18
+
+---
+
+## Incomplete Problems (HIGH PRIORITY)
+
+### Problems Requiring Implementation
+
+| Problem | Difficulty | Pattern | Status |
+|---------|------------|---------|--------|
+| [House Robber](../Medium Problems/house_robber/house_robber.py) | Medium | Dynamic Programming | ❌ Stub Only |
+| [Jump Game](../Medium Problems/jump_game/jump_game.py) | Medium | Greedy | ❌ Stub Only |
+| [Number of 1 Bits](../Easy Problems/number_of_1_bits/number_of_1_bits.py) | Easy | Bit Manipulation | 📝 Stub |
+| [Single Number](../Easy Problems/single_number/single_number.py) | Easy | Bit Manipulation | 📝 Stub |
+| [Search Insert Position](../Easy Problems/search_insert_position/search_insert_position.py) | Easy | Binary Search | 📝 Stub |
+| [First Bad Version](../Easy Problems/first_bad_version/first_bad_version.py) | Easy | Binary Search | 📝 Stub |
+| [Symmetric Tree](../Easy Problems/symmetric_tree/symmetric_tree.py) | Easy | Tree/DFS | 📝 Stub |
+| [Same Tree](../Easy Problems/same_tree/same_tree.py) | Easy | Tree/DFS | 📝 Stub |
+| [Invert Binary Tree](../Easy Problems/invert_binary_tree/invert_binary_tree.py) | Easy | Tree/DFS | 📝 Stub |
+| [Plus One](../Easy Problems/plus_one/plus_one.py) | Easy | Array/Math | 📝 Stub |
+| [Move Zeroes](../Easy Problems/move_zeroes/move_zeroes.py) | Easy | Two Pointers | 📝 Stub |
+| [Course Schedule](../Medium Problems/course_schedule/course_schedule.py) | Medium | Graph/BFS/DFS | 📝 Stub |
+| [Clone Graph](../Medium Problems/clone_graph/clone_graph.py) | Medium | Graph/BFS/DFS | 📝 Stub |
+| [Word Search](../Medium Problems/word_search/word_search.py) | Medium | DFS/Backtracking | 📝 Stub |
+| [Subsets](../Medium Problems/subsets/subsets.py) | Medium | Backtracking | 📝 Stub |
+| [Permutations](../Medium Problems/permutations/permutations.py) | Medium | Backtracking | 📝 Stub |
+| [Sort Colors](../Medium Problems/sort_colors/sort_colors.py) | Medium | Two Pointers | 📝 Stub |
+| [Find Minimum in Rotated Sorted Array](../Medium Problems/find_minimum_rotated/find_minimum_rotated.py) | Medium | Binary Search | 📝 Stub |
+
+### Problems Needing Fixes
+
+| Problem | Difficulty | Pattern | Status |
+|---------|------------|---------|--------|
+| [Container With Most Water](../Medium Problems/container_with_most_water/container_with_most_water.py) | Medium | Two Pointers | ⚠️ Incorrect Implementation |
+
+---
+
+## Algorithmic Patterns
+
+### 1. Hash Map Pattern
+**When to Use**: O(1) lookup, counting elements, complement problems
+**Time Complexity**: O(n) typical
+**Space Complexity**: O(n)
+
+**Examples**:
+- Two Sum - Find complement pairs
+- Contains Duplicate - Track seen elements
+- Group Anagrams - Group by character signatures
+- Top K Frequent Elements - Count frequencies
+- Verifying Alien Dictionary - Custom ordering
+
+**Note**: All problem directories are now organized by difficulty:
+- Easy problems are in `Easy Problems/` directory
+- Medium problems are in `Medium Problems/` directory
+
+### 2. Two Pointers Pattern
+**When to Use**: Sorted arrays, sliding window, removing duplicates
+**Time Complexity**: O(n) typical
+**Space Complexity**: O(1)
+
+**Examples**:
+- Valid Palindrome - Compare from ends
+- Merge Sorted Array - Merge in place backwards
+- Merge Two Sorted Lists - Merge linked lists
+- Container With Most Water - Shrink from widest
+- Three Sum - Sort + two pointers
+
+### 3. Stack Pattern
+**When to Use**: Matching brackets, monotonic problems, "next greater element"
+**Time Complexity**: O(n) typical
+**Space Complexity**: O(n)
+
+**Examples**:
+- Valid Parentheses - Match opening/closing
+- Min Stack - Track minimum with auxiliary stack
+- Daily Temperatures - Find next warmer day
+- Final Prices With Discount - Apply discounts
+
+### 4. Heap / Priority Queue Pattern
+**When to Use**: "Top K" problems, streaming minimums/maximums
+**Time Complexity**: O(n log k) or O(log n) per operation
+**Space Complexity**: O(k) or O(n)
+
+**Examples**:
+- Kth Largest Element in Stream - Maintain min-heap of size k
+- Top K Frequent Elements - Can use heap optimization
+
+### 5. Backtracking Pattern
+**When to Use**: Generating all combinations or permutations
+**Time Complexity**: Exponential (O(2^n), O(n!), O(k^n))
+**Space Complexity**: O(n) recursion depth
+
+**Examples**:
+- Generate Parentheses - Build valid combinations
+- Letter Combinations of a Phone Number - Cartesian product
+
+### 6. Dynamic Programming Pattern
+**When to Use**: Overlapping sub-problems, optimal sub-structure
+**Time Complexity**: O(n × m) or O(n^2) typical
+**Space Complexity**: O(n) or O(n × m)
+
+**Examples**:
+- Climbing Stairs - Fibonacci-like
+- Coin Change - Minimum coins
+- Longest Increasing Subsequence - Build optimal sequence
+- Maximum Subarray - Kadane's algorithm
+- House Robber - Can't rob adjacent houses
+
+### 7. BFS / DFS Pattern
+**When to Use**: Tree traversal, grid exploration, connected components
+**Time Complexity**: O(V + E) or O(n)
+**Space Complexity**: O(h) for DFS, O(w) for BFS
+
+**Examples**:
+- Number of Islands - Grid exploration
+- Maximum Depth of Binary Tree - Tree recursion
+- Count Complete Tree Nodes - Tree traversal
+- Reverse Linked List - Iterative pointer manipulation
+
+### 8. Greedy Pattern
+**When to Use**: Local optimal leads to global optimal
+**Time Complexity**: O(n) or O(n log n)
+**Space Complexity**: O(1) or O(n)
+
+**Examples**:
+- Best Time to Buy and Sell Stock - Capture all profits
+- Jump Game - Track furthest reachable
+- Merge Intervals - Sort + greedy merge
+
+### 9. Bit Manipulation Pattern
+**When to Use**: Operations on binary representation, XOR tricks
+**Time Complexity**: O(1) or O(n) depending on operations
+**Space Complexity**: O(1)
+
+**Examples**:
+- Number of 1 Bits - Count set bits using n & (n-1)
+- Single Number - XOR all elements to find unique
+
+### 10. Graph Algorithms Pattern
+**When to Use**: Cycle detection, traversal, topological sort
+**Time Complexity**: O(V + E)
+**Space Complexity**: O(V + E)
+
+**Examples**:
+- Course Schedule - Detect cycles in directed graph
+- Clone Graph - Deep copy using BFS/DFS
+
+### 11. Trie Pattern
+**When to Use**: String matching, autocomplete
+**Time Complexity**: O(m) for search, O(n*m) for construction
+**Space Complexity**: O(n*m)
+
+**Examples**:
+- Implement Trie - Basic trie operations
+- Word Search II - Use trie for efficient lookup
+
+---
+
+## Completed Problems by Difficulty
+
+### Easy Problems (16 completed, 9 new stubs)
+
+| Problem | Pattern | Time Complexity | Space Complexity | Status |
+|---------|---------|-----------------|------------------|--------|
+| [Contains Duplicate](../Easy Problems/contains_duplicate/contains_duplicate.py) | Hash Map | O(n) | O(n) | ✅ Complete |
+| [Valid Palindrome](../Easy Problems/valid_palindrome/valid_palindrome.py) | Two Pointers | O(n) | O(1) | ✅ Complete |
+| [Binary Search](../Easy Problems/binary_search/binary_search.py) | Binary Search | O(log n) | O(1) | ✅ Complete |
+| [Climbing Stairs](../Easy Problems/climbing_stairs/climbing_stairs.py) | Dynamic Programming | O(n) | O(1) | ✅ Complete |
+| [Missing Number](../Easy Problems/missing_number/missing_number.py) | Hash Map/Math | O(n) | O(1) | ✅ Complete |
+| [Maximum Subarray](../Easy Problems/maximum_subarray/maximum_subarray.py) | Dynamic Programming | O(n) | O(1) | ✅ Complete |
+| [Maximum Depth of Binary Tree](../Easy Problems/maximum_depth_binary_tree/maximum_depth_binary_tree.py) | DFS | O(n) | O(h) | ✅ Complete |
+| [Merge Sorted Array](../Easy Problems/merge_sorted_array/mergeSortedArray.py) | Two Pointers | O(n + m) | O(1) | ✅ Complete |
+| [Final Prices With Discount](../Easy Problems/final_prices_with_discount/finalPricesWithDiscount.py) | Stack | O(n) | O(n) | ✅ Complete |
+| [Best Time to Buy and Sell Stock](../Easy Problems/max_profit_stocks/maxProfitStocks.py) | Greedy | O(n) | O(1) | ✅ Complete |
+| [Merge Two Sorted Lists](../Easy Problems/merge_two_sorted_lists/mergeTwoSortedLinkedLists.py) | Two Pointers | O(n + m) | O(1) | ✅ Complete |
+| [Count Complete Tree Nodes](../Easy Problems/count_complete_tree_nodes/countCompleteTreeNodes.py) | DFS | O(n) | O(h) | ✅ Complete |
+| [Two Sum (Brute Force)](../Easy Problems/two_sum/twoSumBruteForce.py) | Brute Force | O(n²) | O(1) | ✅ Complete |
+| [Two Sum (Hash Map)](../Easy Problems/two_sum/twoSumOnePassHash.py) | Hash Map | O(n) | O(n) | ✅ Complete |
+| [Valid Parentheses](../Easy Problems/valid_parentheses/valid_parentheses.py) | Stack | O(n) | O(n) | ✅ Complete |
+| [Reverse Linked List](../Easy Problems/reverse_linked_list/reverse_linked_list.py) | Pointers | O(n) | O(1) | ✅ Complete |
+| [Number of 1 Bits](../Easy Problems/number_of_1_bits/number_of_1_bits.py) | Bit Manipulation | O(1) | O(1) | 📝 Stub |
+| [Single Number](../Easy Problems/single_number/single_number.py) | Bit Manipulation | O(n) | O(1) | 📝 Stub |
+| [Search Insert Position](../Easy Problems/search_insert_position/search_insert_position.py) | Binary Search | O(log n) | O(1) | 📝 Stub |
+| [First Bad Version](../Easy Problems/first_bad_version/first_bad_version.py) | Binary Search | O(log n) | O(1) | 📝 Stub |
+| [Symmetric Tree](../Easy Problems/symmetric_tree/symmetric_tree.py) | Tree/DFS | O(n) | O(h) | 📝 Stub |
+| [Same Tree](../Easy Problems/same_tree/same_tree.py) | Tree/DFS | O(min(m,n)) | O(h) | 📝 Stub |
+| [Invert Binary Tree](../Easy Problems/invert_binary_tree/invert_binary_tree.py) | Tree/DFS | O(n) | O(h) | 📝 Stub |
+| [Plus One](../Easy Problems/plus_one/plus_one.py) | Array/Math | O(n) | O(1) | 📝 Stub |
+| [Move Zeroes](../Easy Problems/move_zeroes/move_zeroes.py) | Two Pointers | O(n) | O(1) | 📝 Stub |
+
+### Medium Problems (18 completed, 7 new stubs)
+
+| Problem | Pattern | Time Complexity | Space Complexity | Status |
+|---------|---------|-----------------|------------------|--------|
+| [Longest Palindromic Substring](../Medium Problems/longest_palindromic_substring/longest_palindromic_substring.py) | Two Pointers | O(n²) | O(1) | ✅ Complete |
+| [Add Two Numbers](../Medium Problems/add_two_numbers/addTwoNumbers.py) | Linked List | O(max(n,m)) | O(max(n,m)) | ✅ Complete |
+| [Coin Change](../Medium Problems/coin_change/coinChangeDp.py) | Dynamic Programming | O(n × m) | O(m) | ✅ Complete |
+| [Daily Temperatures](../Medium Problems/daily_temperatures/dailyTemperaturesStack.py) | Stack | O(n) | O(n) | ✅ Complete |
+| [Min Stack](../Medium Problems/min_stack/minStack.py) | Auxiliary Stack | O(1) all ops | O(n) | ✅ Complete |
+| [Generate Parentheses](../Medium Problems/generate_parenthesis/generateParenthesis.py) | Backtracking | O(4^n/√n) | O(n) | ✅ Complete |
+| [Letter Combinations of a Phone Number](../Medium Problems/letter_combinations_phone_number/letterCombinationsOfAPhoneNumber.py) | Backtracking | O(4^n) | O(4^n) | ✅ Complete |
+| [Closest Target in a Circular Array](../Medium Problems/closest_target_circle_array/closestTargerCircleArray.py) | Two Pointers | O(n) | O(1) | ✅ Complete |
+| [Kth Largest Element in a Stream](../Medium Problems/kth_largest_element/kthLargestElement.py) | Heap | O(log k) per add | O(k) | ✅ Complete |
+| [Longest Consecutive Sequence](../Medium Problems/longest_consecutive_sequence/longestConseqSeq.py) | Sort + Scan | O(n log n) | O(n) | ✅ Complete |
+| [Longest Increasing Subsequence](../Medium Problems/longest_increasing_subsequence/longestIncSubseq.py) | Dynamic Programming | O(n²) | O(n) | ✅ Complete |
+| [Merge Intervals](../Medium Problems/merge_intervals/mergeIntervals.py) | Sort + Greedy | O(n log n) | O(n) | ✅ Complete |
+| [Longest Substring Without Repeating Characters](../Medium Problems/longest_substring/lengthOfLongestSubstringSlidingWindow.py) | Sliding Window | O(n) | O(min(n,m)) | ✅ Complete |
+| [Verifying Alien Dictionary](../Medium Problems/verifying_alien_dictionary/verifying_alien_dictionary.py) | Hash Map | O(n × m) | O(1) | ✅ Complete |
+| [Top K Frequent Elements](../Medium Problems/top_k_frequent_elements/topKFrequentElements.py) | Frequency Count | O(n log n) | O(n) | ✅ Complete |
+| [Group Anagrams](../Medium Problems/group_anagrams/group_anagrams.py) | Hash Map | O(n × k log k) | O(n × k) | ✅ Complete |
+| [Spiral Matrix](../Medium Problems/spiral_matrix/spiral_matrix.py) | Simulation | O(n × m) | O(1) | ✅ Complete |
+| [Product Except Self](../Medium Problems/product_except_self/product_except_self.py) | Two Pass | O(n) | O(1) | ✅ Complete |
+| [Course Schedule](../Medium Problems/course_schedule/course_schedule.py) | Graph/BFS/DFS | O(V + E) | O(V + E) | 📝 Stub |
+| [Clone Graph](../Medium Problems/clone_graph/clone_graph.py) | Graph/BFS/DFS | O(V + E) | O(V) | 📝 Stub |
+| [Word Search](../Medium Problems/word_search/word_search.py) | DFS/Backtracking | O(N × 3^L) | O(L) | 📝 Stub |
+| [Subsets](../Medium Problems/subsets/subsets.py) | Backtracking | O(N × 2^N) | O(N) | 📝 Stub |
+| [Permutations](../Medium Problems/permutations/permutations.py) | Backtracking | O(N × N!) | O(N) | 📝 Stub |
+| [Sort Colors](../Medium Problems/sort_colors/sort_colors.py) | Two Pointers | O(n) | O(1) | 📝 Stub |
+| [Find Minimum in Rotated Sorted Array](../Medium Problems/find_minimum_rotated/find_minimum_rotated.py) | Binary Search | O(log n) | O(1) | 📝 Stub |
+
+---
+
+## Learning Path by Difficulty
+
+### Phase 1: Foundation (Easy Problems)
+**Focus**: Basic patterns, simple data structures
+
+1. **Hash Map Basics**
+   - [Contains Duplicate](../Easy Problems/contains_duplicate/contains_duplicate.py)
+   - [Two Sum](../Easy Problems/two_sum/twoSumOnePassHash.py) (Hash Map version)
+
+2. **Two Pointers Introduction**
+   - [Valid Palindrome](../Easy Problems/valid_palindrome/valid_palindrome.py)
+   - [Merge Sorted Array](../Easy Problems/merge_sorted_array/mergeSortedArray.py)
+   - [Move Zeroes](../Easy Problems/move_zeroes/move_zeroes.py) (NEW)
+
+3. **Stack Fundamentals**
+   - [Valid Parentheses](../Easy Problems/valid_parentheses/valid_parentheses.py)
+
+4. **Tree Traversal**
+   - [Maximum Depth of Binary Tree](../Easy Problems/maximum_depth_binary_tree/maximum_depth_binary_tree.py)
+   - [Count Complete Tree Nodes](../Easy Problems/count_complete_tree_nodes/countCompleteTreeNodes.py)
+   - [Symmetric Tree](../Easy Problems/symmetric_tree/symmetric_tree.py) (NEW)
+   - [Same Tree](../Easy Problems/same_tree/same_tree.py) (NEW)
+   - [Invert Binary Tree](../Easy Problems/invert_binary_tree/invert_binary_tree.py) (NEW)
+
+5. **Dynamic Programming Basics**
+   - [Climbing Stairs](../Easy Problems/climbing_stairs/climbing_stairs.py)
+   - [Maximum Subarray](../Easy Problems/maximum_subarray/maximum_subarray.py)
+
+6. **Linked Lists**
+   - [Merge Two Sorted Lists](../Easy Problems/merge_two_sorted_lists/mergeTwoSortedLinkedLists.py)
+   - [Reverse Linked List](../Easy Problems/reverse_linked_list/reverse_linked_list.py)
+
+7. **Binary Search**
+   - [Binary Search](../Easy Problems/binary_search/binary_search.py)
+   - [Search Insert Position](../Easy Problems/search_insert_position/search_insert_position.py) (NEW)
+   - [First Bad Version](../Easy Problems/first_bad_version/first_bad_version.py) (NEW)
+
+8. **Bit Manipulation (NEW)**
+   - [Number of 1 Bits](../Easy Problems/number_of_1_bits/number_of_1_bits.py) (NEW)
+   - [Single Number](../Easy Problems/single_number/single_number.py) (NEW)
+
+9. **Array/Math**
+   - [Missing Number](../Easy Problems/missing_number/missing_number.py)
+   - [Plus One](../Easy Problems/plus_one/plus_one.py) (NEW)
+
+### Phase 2: Intermediate (Medium Problems)
+**Focus**: Complex patterns, optimization
+
+1. **Advanced Hash Map**
+   - [Group Anagrams](../Medium Problems/group_anagrams/group_anagrams.py)
+   - [Verifying Alien Dictionary](../Medium Problems/verifying_alien_dictionary/verifying_alien_dictionary.py)
+   - [Top K Frequent Elements](../Medium Problems/top_k_frequent_elements/topKFrequentElements.py)
+
+2. **Advanced Two Pointers**
+   - [Longest Palindromic Substring](../Medium Problems/longest_palindromic_substring/longest_palindromic_substring.py)
+   - [Three Sum](../Medium Problems/three_sum/three_sum.py)
+   - [Longest Substring Without Repeating Characters](../Medium Problems/longest_substring/lengthOfLongestSubstringSlidingWindow.py)
+   - [Sort Colors](../Medium Problems/sort_colors/sort_colors.py) (NEW)
+
+3. **Stack Applications**
+   - [Min Stack](../Medium Problems/min_stack/minStack.py)
+   - [Daily Temperatures](../Medium Problems/daily_temperatures/dailyTemperaturesStack.py)
+   - [Final Prices With Discount](../Easy Problems/final_prices_with_discount/finalPricesWithDiscount.py)
+
+4. **Dynamic Programming**
+   - [Coin Change](../Medium Problems/coin_change/coinChangeDp.py)
+   - [Longest Increasing Subsequence](../Medium Problems/longest_increasing_subsequence/longestIncSubseq.py)
+   - [House Robber](../Medium Problems/house_robber/house_robber.py) (TODO)
+
+5. **Backtracking**
+   - [Generate Parentheses](../Medium Problems/generate_parenthesis/generateParenthesis.py)
+   - [Letter Combinations of a Phone Number](../Medium Problems/letter_combinations_phone_number/letterCombinationsOfAPhoneNumber.py)
+   - [Subsets](../Medium Problems/subsets/subsets.py) (NEW)
+   - [Permutations](../Medium Problems/permutations/permutations.py) (NEW)
+
+6. **Heap/Priority Queue**
+   - [Kth Largest Element in a Stream](../Medium Problems/kth_largest_element/kthLargestElement.py)
+
+7. **Greedy Algorithms**
+   - [Best Time to Buy and Sell Stock](../Easy Problems/max_profit_stocks/maxProfitStocks.py)
+   - [Merge Intervals](../Medium Problems/merge_intervals/mergeIntervals.py)
+   - [Jump Game](../Medium Problems/jump_game/jump_game.py) (TODO)
+
+8. **BFS/DFS**
+   - [Number of Islands](../Medium Problems/number_of_islands/numberOfIslands.py)
+   - [Word Search](../Medium Problems/word_search/word_search.py) (NEW)
+
+9. **Graph Algorithms (NEW)**
+   - [Course Schedule](../Medium Problems/course_schedule/course_schedule.py) (NEW)
+   - [Clone Graph](../Medium Problems/clone_graph/clone_graph.py) (NEW)
+
+10. **Matrix Problems**
+    - [Spiral Matrix](../Medium Problems/spiral_matrix/spiral_matrix.py)
+    - [Search 2D Matrix](../Medium Problems/search_2d_matrix/search_2d_matrix.py)
+    - [Rotate Image](../Medium Problems/rotate_image/rotate_image.py)
+    - [Container With Most Water](../Medium Problems/container_with_most_water/container_with_most_water.py) (needs fix)
+
+11. **Linked Lists Advanced**
+    - [Add Two Numbers](../Medium Problems/add_two_numbers/addTwoNumbers.py)
+
+12. **Array Manipulation**
+    - [Product Except Self](../Medium Problems/product_except_self/product_except_self.py)
+    - [Longest Consecutive Sequence](../Medium Problems/longest_consecutive_sequence/longestConseqSeq.py)
+    - [Closest Target in a Circular Array](../Medium Problems/closest_target_circle_array/closestTargerCircleArray.py)
+
+13. **Binary Search**
+    - [Find Minimum in Rotated Sorted Array](../Medium Problems/find_minimum_rotated/find_minimum_rotated.py) (NEW)
+
+---
+
+## Complexity Reference
+
+| Complexity | Description | Typical Operations |
+|------------|-------------|-------------------|
+| O(1) | Constant | Hash map lookup, array access |
+| O(log n) | Logarithmic | Binary search, heap operations |
+| O(n) | Linear | Single loop, hash map iteration |
+| O(n log n) | Linearithmic | Sorting, heap operations |
+| O(n²) | Quadratic | Nested loops, some DP |
+| O(2^n) | Exponential | Backtracking, brute force |
+| O(n!) | Factorial | Permutations |
+
+---
+
+## Next Steps
+
+### Immediate (Incomplete Problems)
+1. ✅ **Fix Container With Most Water** - Implement proper two-pointer solution
+2. ✅ **Implement House Robber** - Dynamic programming solution
+3. ✅ **Implement Jump Game** - Greedy algorithm
+
+### New Stub Problems (18 total)
+**Easy (9 new):**
+- Number of 1 Bits - Bit Manipulation
+- Single Number - Bit Manipulation
+- Search Insert Position - Binary Search
+- First Bad Version - Binary Search
+- Symmetric Tree - Tree/DFS
+- Same Tree - Tree/DFS
+- Invert Binary Tree - Tree/DFS
+- Plus One - Array/Math
+- Move Zeroes - Two Pointers
+
+**Intermediate (7 new):**
+- Course Schedule - Graph/BFS/DFS
+- Clone Graph - Graph/BFS/DFS
+- Word Search - DFS/Backtracking
+- Subsets - Backtracking
+- Permutations - Backtracking
+- Sort Colors - Two Pointers
+- Find Minimum in Rotated Sorted Array - Binary Search
+
+### Future Additions
+Consider adding these patterns and problems:
+- Graph algorithms (Dijkstra, BFS/DFS on graphs)
+- Trie data structure
+- Segment Tree
+- Binary Indexed Tree
+- More advanced DP problems
+- Hard difficulty problems
